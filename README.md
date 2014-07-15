@@ -21,6 +21,21 @@ var flickr = new Flickr({
 });
 ```
 
+## Complete Example
+
+```js
+var Flickr = require('flickr-simple');
+var flickr = new Flickr({
+  api_key: process.env.FLICKR_API_KEY)
+});
+
+flickr.photos.search({
+  tags: 'mozilla'
+}, function (err, data) {
+  console.log(data);
+});
+```
+
 ## Methods
 
 ## photos.search(query, callback, size)
@@ -48,13 +63,13 @@ b large, 1024 on longest side
 o original image, either a jpg, gif or png, depending on source format
 ```
 
-### Usage:
+### Example:
 ```js
 flickr.photos.search({
   tags: 'mozilla'
 }, function (err, data) {
   console.log(data);
-}, 'm');
+}, 't');
 ```
 
 ### Data format:
