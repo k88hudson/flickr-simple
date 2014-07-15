@@ -1,18 +1,19 @@
 {
-  "name": "flickr-api",
+  "name": "flickr-simple",
   "version": "0.0.0",
-  "description": "https://www.flickr.com/services/api/flickr.photos.search.html",
+  "description": "A very simple node flickr client",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "",
+  "author": "k88hudson",
   "license": "MPL-2.0",
   "dependencies": {
-    "extend": "^1.3.0",
-    "request": "^2.37.0"
+    "extend": "1.3.0",
+    "request": "2.37.0"
   },
   "devDependencies": {
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "mocha": "^1.20.1"
   }
 }
