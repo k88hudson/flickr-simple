@@ -33,9 +33,13 @@ module.exports = function Flickr(keys) {
 
   // Photos
   self.photos = {};
-  self.photos.search = function photosSearch(userQuery, cb, size) {
+  self.photos.search = function photosSearch(userQuery, cb) {
     userQuery.method = 'flickr.photos.search';
     query = extend(baseQuery, userQuery);
+    // Extract size for image urls
+    var size = query.size;
+    delete query.size;
+
     request.get({
       uri: uri,
       qs: query

@@ -38,18 +38,14 @@ flickr.photos.search({
 
 ## Methods
 
-## photos.search(query, callback, size)
+## photos.search(query, callback)
 
 ### Parameters
 
 ####`query`
 An object based on flickr's documentation: https://www.flickr.com/services/api/flickr.photos.search.html
 
-####`callback`
-A function with the signature `err, data`, where data is in the format described below
-
-####`size`
-An optional size (defaults to medium, 500 on longest side), one of:
+Additionally, the query can contain an optional `size` (defaults to medium, 500 on longest side), which should be one of:
 
 ```
 s small square 75x75
@@ -62,6 +58,10 @@ c medium 800, 800 on longest side
 b large, 1024 on longest side
 o original image, either a jpg, gif or png, depending on source format
 ```
+
+####`callback`
+A function with the signature `err, data`, where data is in the format described below
+
 
 ### Example:
 ```js
