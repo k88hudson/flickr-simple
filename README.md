@@ -66,10 +66,11 @@ A function with the signature `err, data`, where data is in the format described
 ### Example:
 ```js
 flickr.photos.search({
-  tags: 'mozilla'
+  tags: 'mozilla',
+  size: 't' // Thumbnails
 }, function (err, data) {
   console.log(data);
-}, 't');
+});
 ```
 
 ### Data format:
